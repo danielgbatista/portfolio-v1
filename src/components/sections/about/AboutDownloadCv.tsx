@@ -2,7 +2,6 @@ import { DownloadIcon } from "./AboutIcons"
 
 type AboutDownloadCvProps = {
   pdfHref?: string
-  docxHref?: string
 }
 
 export function AboutDownloadCv({
@@ -19,10 +18,6 @@ export function AboutDownloadCv({
           <DownloadIcon />
           Baixar PDF
         </a>
-        {/* <a href={docxHref} download className={linkClass}>
-          <DownloadIcon />
-          Baixar DOCX
-        </a> */}
       </div>
     </div>
   )
