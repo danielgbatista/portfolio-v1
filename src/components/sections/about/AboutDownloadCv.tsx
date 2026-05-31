@@ -6,8 +6,7 @@ type AboutDownloadCvProps = {
 }
 
 export function AboutDownloadCv({
-  pdfHref = "/assets/files/curriculo.pdf",
-  docxHref = "/cv.docx",
+  pdfHref = "/assets/files/curriculo.pdf"
 }: AboutDownloadCvProps) {
   const linkClass =
     "inline-flex items-center gap-2 rounded-lg border border-foreground/20 bg-transparent px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground/30"
