@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 
+import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll"
 import { SectionTitle } from "@/components/ui/SectionTitle"
 import { PROJECTS, type Project } from "@/constants/projects"
 
@@ -18,13 +19,17 @@ export default function Projects() {
       aria-labelledby="projects-heading"
     >
       <div className="mx-auto max-w-6xl">
-        <SectionTitle id="projects-heading">Projetos</SectionTitle>
+        <AnimateOnScroll>
+          <SectionTitle id="projects-heading">Projetos</SectionTitle>
+        </AnimateOnScroll>
 
         {PROJECTS.length > 0 ? (
           <ul className="mt-10 grid list-none grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {PROJECTS.map((project) => (
+            {PROJECTS.map((project, index) => (
               <li key={project.id}>
-                <ProjectCard project={project} onExpand={setSelectedProject} />
+                <AnimateOnScroll delay={index * 80}>
+                  <ProjectCard project={project} onExpand={setSelectedProject} />
+                </AnimateOnScroll>
               </li>
             ))}
           </ul>

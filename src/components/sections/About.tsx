@@ -1,3 +1,4 @@
+import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { EDUCATION } from "@/constants/education";
 import { EXPERIENCES } from "@/constants/experience";
@@ -15,11 +16,13 @@ export default function About() {
   return (
     <section
       id="about"
-      className="scroll-mt-24 bg-[#FFFFFF] font-sans"
+      className="scroll-mt-24 bg-[#FFFFFF] px-4 py-16 font-sans sm:px-6 sm:py-20"
       aria-labelledby="about-heading"
     >
       <div className="mx-auto max-w-6xl">
-        <SectionTitle id="about-heading">Sobre Mim</SectionTitle>
+        <AnimateOnScroll>
+          <SectionTitle id="about-heading">Sobre Mim</SectionTitle>
+        </AnimateOnScroll>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
           <ProfileCard
@@ -37,7 +40,9 @@ export default function About() {
           <ExperienceCard items={EXPERIENCES} />
         </div>
 
-        <AboutDownloadCv />
+        <AnimateOnScroll delay={120}>
+          <AboutDownloadCv />
+        </AnimateOnScroll>
       </div>
     </section>
   );

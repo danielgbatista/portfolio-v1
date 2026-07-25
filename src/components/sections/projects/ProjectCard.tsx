@@ -21,13 +21,13 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project, onExpand }: ProjectCardProps) {
   return (
-    <article className="overflow-hidden rounded-lg border border-[#C3C3C3] bg-background relative">
-      <div className="relative aspect-[4/3] w-full bg-foreground/5">
+    <article className="interactive-card group overflow-hidden rounded-lg border border-[#C3C3C3] bg-background relative">
+      <div className="relative aspect-[4/3] w-full overflow-hidden bg-foreground/5">
         <Image
           src={project.image}
           alt=""
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
         />
       </div>
@@ -39,7 +39,7 @@ export function ProjectCard({ project, onExpand }: ProjectCardProps) {
       <button
         type="button"
         onClick={() => onExpand(project)}
-        className="absolute top-3 right-3 inline-flex shrink-0 items-center gap-1.5 rounded-md bg-[#0C111D] px-2 py-2 text-xs font-medium text-white transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0C111D]/40 sm:text-sm cursor-pointer"
+        className="absolute top-3 right-3 inline-flex shrink-0 items-center gap-1.5 rounded-md bg-[#0C111D] px-2 py-2 text-xs font-medium text-white transition-all duration-200 hover:scale-105 hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0C111D]/40 sm:text-sm cursor-pointer"
       >
         <ExternalLinkIcon />
       </button>

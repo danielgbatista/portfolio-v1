@@ -44,24 +44,26 @@ export default function Hero() {
       <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
         <h1
           id="hero-heading"
-          className="text-balance text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl"
+          className="animate-hero-in text-balance text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl"
         >
           Olá, Seja bem-vindo! Sou <NameWithAccent />
         </h1>
-        <p className="mt-4 text-lg text-foreground/90 sm:text-xl md:text-2xl">
+        <p className="animate-hero-in animate-hero-in-delay-1 mt-4 text-lg text-foreground/90 sm:text-xl md:text-2xl">
           {PROFILE.role}
         </p>
         <Link
           href="#projects"
-          className="mt-10 inline-flex items-center justify-center rounded-md bg-foreground px-8 py-3 text-sm font-medium text-background transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground/50 sm:text-base"
+          className="interactive-btn animate-hero-in animate-hero-in-delay-2 mt-10 inline-flex items-center justify-center rounded-md bg-foreground px-8 py-3 text-sm font-medium text-background hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground/50 sm:text-base"
         >
           Explorar Projetos
         </Link>
         <div
-          className="mt-14 flex flex-col items-center gap-2"
+          className="animate-hero-in animate-hero-in-delay-3 mt-14 flex flex-col items-center gap-2"
           aria-hidden
         >
-          <ScrollMouseIcon />
+          <div className="animate-scroll-bounce">
+            <ScrollMouseIcon />
+          </div>
         </div>
       </div>
     </section>
